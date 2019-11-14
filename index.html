@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jeu de plateau</title>
+    <meta name="description" content="Un jeu de plateau développé en JavaScript.">
+    <!-- Style CSS de base pour la progressbar -->
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/smoothness/jquery-ui.css" />
+    <!-- Style CSS de base pour la page -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="topbar"><span style="font-size: 160%; color: #666">Jeu de plateau</span><br>
+            <p><a href="https://openclassrooms.com/fr/projects/creez-un-jeu-de-plateau-tour-par-tour-en-js" target="_blank">Projet 6</a> - <a href="https://openclassrooms.com/fr/paths/60-developpeur-dapplication-frontend" target="_blank">Développeur d'Applications Front-end</a> - <a href="https://openclassrooms.com" target="_blank">OpenClassrooms</a>
+            </p>
+            <hr style="width: 620px">
+        </div>
+        <div id="instructionbar"><span id="instructions">Pour jouer, indiquez vos noms de joueurs</span><br>
+        </div>
+        <div id="main">
+            <div id="div-player1"><span id="title-player1">Player 1</span>
+                <p><img src='assets/img/bigP1n.png' alt="BigPlayer1" title='player1' /></p>
+                <hr>
+                <div id="divname-player1">
+                    <p id="pname1">Nom joueur 1 :</p>
+                    <input type="text" id="name1" name="name1" placeholder="Pseudo..."><button class="button" id="buttonname1">OK</button>
+                </div>
+                <span id="quijoue-player1"></span><br>
+                <span id="obstacle-player1"></span><br>
+                <span id="arme-player1"></span><br>
+                <span id="forcearme-player1"></span><br>
+                <span id="vie-player1"></span><br>
+                <div id="barre-player1"></div><br>
+                <span id="choix-player1"></span>
+            </div>
+            <div id="carte">Veuillez activer Javascript pour jouer</div>
+            <div id="div-player2"><span id="title-player2">Player 2</span>
+                <p><img src='assets/img/bigP2n.png' alt="BigPlayer2" title='player2' /></p>
+                <hr>
+                <div id="divname-player2">
+                    <p id="pname2">Nom joueur 2 :</p>
+                    <input type="text" id="name2" name="name2" placeholder="Pseudo..."><button class="button" id="buttonname2">OK</button>
+                </div>
+                <span id="quijoue-player2"></span><br>
+                <span id="obstacle-player2"></span><br>
+                <span id="arme-player2"></span><br>
+                <span id="forcearme-player2"></span><br>
+                <span id="vie-player2"></span><br>
+                <div id="barre-player2"></div><br>
+                <span id="choix-player2"></span>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/js/util.js"></script>
+    <script type="text/javascript" src="assets/js/cell.js"></script>
+    <script type="text/javascript" src="assets/js/player.js"></script>
+    <script type="text/javascript" src="assets/js/weapon.js"></script>
+    <script type="text/javascript" src="assets/js/map.js"></script>
+    <script type="text/javascript" src="assets/js/move.js"></script>
+    <script type="text/javascript" src="assets/js/fight.js"></script>
+
+</body>
+
+</html>

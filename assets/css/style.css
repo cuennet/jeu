@@ -1,0 +1,229 @@
+#carte {
+    display: inline-block;
+    border: 1px solid #bbb;
+}
+
+#topbar {
+    font-family: Arial, sans-serif;
+    width: auto;
+    display: block;
+    height: 80px;
+    text-align: center;
+}
+
+#instructionbar {
+    font-family: Arial, sans-serif;
+    color: #f44242;
+    font-size: 150%;
+    width: auto;
+    display: block;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+#main {
+    text-align: center;
+    width: 992px;
+    height: 630px;
+    margin: auto;
+}
+
+#div-player1 {
+    font-family: Arial, sans-serif;
+    padding-top: 10px;
+    height: 610px;
+    width: 180px;
+    float: left;
+    border: 1px solid #bbb;
+}
+#div-player2 {
+    font-family: Arial, sans-serif;
+    padding-top: 10px;
+    height: 610px;
+    width: 180px;
+    float: right;
+    border: solid 1px #bbb;
+}
+#quijoue-player2, #quijoue-player1, #obstacle-player2, #obstacle-player1 {
+    display: block;
+    padding-top: 10px; 
+}
+#arme-player2, #arme-player1, #forcearme-player2, #forcearme-player1, #vie-player2, #vie-player1 {
+    display: block;
+    padding-top: 20px; 
+}
+#barre-player2, #barre-player1 {
+    margin: 10px;     
+}
+#choix-player2, #choix-player1 {
+    display: block; 
+    text-align: left;
+    margin-left: 20px;
+}
+
+#footer {
+    font-family: Arial, sans-serif;
+    width: auto;
+    display: block;
+    height: 30px;
+    text-align: center;
+    font-size: 130%;
+    color: #f44242;
+}
+
+hr {
+  border: 1px solid #bbb;
+}
+
+/*##############---------  INPUT, BUTTON PSEUDO PLAYERS et PILE OU FACE  ---------#############*/
+input[type=text] {
+    width: 60%;
+    font-size: 14px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-bottom: 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    background-color: white;
+    color: black;
+    border: 1px solid #777;
+    border-radius: 4px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #777;
+    color: white;
+}
+
+.pf {
+    font: 12px Arial, sans-serif;
+    width: 50px;
+	height: 50px;
+    background: #fafafa;
+	box-shadow: 0px 4px 8px #aaa;
+	border-radius:50%;
+    cursor: pointer;
+}
+.pf:hover{
+    box-shadow: 0px 0px 0px #aaa;
+    transition-duration: 0.4s;
+}
+
+/*#################--------  MISE EN TABLEAU DES DIV ET COULEURS CASES  ------###############*/
+div.map {
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.vide {
+    display: table-cell;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #bbb;
+    vertical-align: middle;
+}
+.obstacle {
+    display: table-cell;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle closest-side, #333 2px, #999 25px, #eee 50px);
+    border: 1px solid #f44242;
+    border-radius: 5px;
+}
+.player1, .player2 {
+    background-color: white;
+    display: table-cell;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #bbb;
+}
+/*######################--------------  STYLES DES LIENS   ------------#####################*/
+a {
+    text-decoration: none;
+    color: #888;
+    position: relative;
+}
+
+a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #f44242;
+    /*rouge foncé*/
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all .5s cubic-bezier(1, .25, 0, .75) 0s;
+    transition: all .3s cubic-bezier(1, .25, 0, .75) 0s;
+}
+
+a:hover {
+    color: black;
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+a:active,
+a:focus {
+    color: black;
+}
+
+a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+a:visited {
+    color: gray;
+}
+
+/*#######################--------------  BOUTONS RADIO   ------------######################*/
+ .block {
+    display: block;
+   }
+input[type=radio] {
+    height: 22px;
+    width: 22px;
+    vertical-align: middle;
+}
+
+/*#######################--------------  MEDIA QUERIES   ------------######################*/
+/* Taille d'écrans inférieures à 992 px */
+@media screen and (max-width: 992px) {
+    body {
+        background-color: beige;
+    }
+
+    #main {
+        width: 600px;
+    }
+
+    #div-player1, #div-player2 {
+        width: 600px;
+        float: none;
+        height: auto;
+    }
+}
